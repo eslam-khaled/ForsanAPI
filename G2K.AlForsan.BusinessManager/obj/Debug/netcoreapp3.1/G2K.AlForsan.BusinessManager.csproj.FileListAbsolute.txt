@@ -1,0 +1,12 @@
+C:\Users\eslam.khaled\source\repos\G2K.AlForsan.API\G2K.AlForsan.BusinessManager\bin\Debug\netcoreapp3.1\G2K.AlForsan.BusinessManager.deps.json
+C:\Users\eslam.khaled\source\repos\G2K.AlForsan.API\G2K.AlForsan.BusinessManager\bin\Debug\netcoreapp3.1\G2K.AlForsan.BusinessManager.dll
+C:\Users\eslam.khaled\source\repos\G2K.AlForsan.API\G2K.AlForsan.BusinessManager\bin\Debug\netcoreapp3.1\G2K.AlForsan.BusinessManager.pdb
+C:\Users\eslam.khaled\source\repos\G2K.AlForsan.API\G2K.AlForsan.BusinessManager\bin\Debug\netcoreapp3.1\G2K.AlForsan.Base.dll
+C:\Users\eslam.khaled\source\repos\G2K.AlForsan.API\G2K.AlForsan.BusinessManager\bin\Debug\netcoreapp3.1\G2K.AlForsan.Base.pdb
+C:\Users\eslam.khaled\source\repos\G2K.AlForsan.API\G2K.AlForsan.BusinessManager\obj\Debug\netcoreapp3.1\G2K.AlForsan.BusinessManager.csprojAssemblyReference.cache
+C:\Users\eslam.khaled\source\repos\G2K.AlForsan.API\G2K.AlForsan.BusinessManager\obj\Debug\netcoreapp3.1\G2K.AlForsan.BusinessManager.AssemblyInfoInputs.cache
+C:\Users\eslam.khaled\source\repos\G2K.AlForsan.API\G2K.AlForsan.BusinessManager\obj\Debug\netcoreapp3.1\G2K.AlForsan.BusinessManager.AssemblyInfo.cs
+C:\Users\eslam.khaled\source\repos\G2K.AlForsan.API\G2K.AlForsan.BusinessManager\obj\Debug\netcoreapp3.1\G2K.AlForsan.BusinessManager.csproj.CoreCompileInputs.cache
+C:\Users\eslam.khaled\source\repos\G2K.AlForsan.API\G2K.AlForsan.BusinessManager\obj\Debug\netcoreapp3.1\G2K.AlForsan.BusinessManager.csproj.CopyComplete
+C:\Users\eslam.khaled\source\repos\G2K.AlForsan.API\G2K.AlForsan.BusinessManager\obj\Debug\netcoreapp3.1\G2K.AlForsan.BusinessManager.dll
+C:\Users\eslam.khaled\source\repos\G2K.AlForsan.API\G2K.AlForsan.BusinessManager\obj\Debug\netcoreapp3.1\G2K.AlForsan.BusinessManager.pdb

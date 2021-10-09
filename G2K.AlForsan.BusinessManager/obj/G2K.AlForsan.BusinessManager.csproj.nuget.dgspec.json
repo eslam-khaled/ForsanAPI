@@ -1,0 +1,164 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\eslam.khaled\\source\\repos\\G2K.AlForsan.API\\G2K.AlForsan.BusinessManager\\G2K.AlForsan.BusinessManager.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\eslam.khaled\\source\\repos\\G2K.AlForsan.API\\G2K.AlForsan.Base\\G2K.AlForsan.Base.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\eslam.khaled\\source\\repos\\G2K.AlForsan.API\\G2K.AlForsan.Base\\G2K.AlForsan.Base.csproj",
+        "projectName": "G2K.AlForsan.Base",
+        "projectPath": "C:\\Users\\eslam.khaled\\source\\repos\\G2K.AlForsan.API\\G2K.AlForsan.Base\\G2K.AlForsan.Base.csproj",
+        "packagesPath": "C:\\Users\\eslam.khaled\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eslam.khaled\\source\\repos\\G2K.AlForsan.API\\G2K.AlForsan.Base\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\eslam.khaled\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "System.ServiceModel.Duplex": {
+              "target": "Package",
+              "version": "[4.4.*, )"
+            },
+            "System.ServiceModel.Http": {
+              "target": "Package",
+              "version": "[4.4.*, )"
+            },
+            "System.ServiceModel.NetTcp": {
+              "target": "Package",
+              "version": "[4.4.*, )"
+            },
+            "System.ServiceModel.Security": {
+              "target": "Package",
+              "version": "[4.4.*, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\eslam.khaled\\source\\repos\\G2K.AlForsan.API\\G2K.AlForsan.BusinessManager\\G2K.AlForsan.BusinessManager.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\eslam.khaled\\source\\repos\\G2K.AlForsan.API\\G2K.AlForsan.BusinessManager\\G2K.AlForsan.BusinessManager.csproj",
+        "projectName": "G2K.AlForsan.BusinessManager",
+        "projectPath": "C:\\Users\\eslam.khaled\\source\\repos\\G2K.AlForsan.API\\G2K.AlForsan.BusinessManager\\G2K.AlForsan.BusinessManager.csproj",
+        "packagesPath": "C:\\Users\\eslam.khaled\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eslam.khaled\\source\\repos\\G2K.AlForsan.API\\G2K.AlForsan.BusinessManager\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\eslam.khaled\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\eslam.khaled\\source\\repos\\G2K.AlForsan.API\\G2K.AlForsan.Base\\G2K.AlForsan.Base.csproj": {
+                "projectPath": "C:\\Users\\eslam.khaled\\source\\repos\\G2K.AlForsan.API\\G2K.AlForsan.Base\\G2K.AlForsan.Base.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "System.ServiceModel.Duplex": {
+              "target": "Package",
+              "version": "[4.4.*, )"
+            },
+            "System.ServiceModel.Http": {
+              "target": "Package",
+              "version": "[4.4.*, )"
+            },
+            "System.ServiceModel.NetTcp": {
+              "target": "Package",
+              "version": "[4.4.*, )"
+            },
+            "System.ServiceModel.Security": {
+              "target": "Package",
+              "version": "[4.4.*, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

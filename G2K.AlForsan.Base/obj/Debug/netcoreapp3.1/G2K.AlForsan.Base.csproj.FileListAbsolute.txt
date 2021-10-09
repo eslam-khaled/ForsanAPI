@@ -1,0 +1,9 @@
+C:\Users\eslam.khaled\source\repos\G2K.AlForsan.API\G2K.AlForsan.Base\bin\Debug\netcoreapp3.1\G2K.AlForsan.Base.deps.json
+C:\Users\eslam.khaled\source\repos\G2K.AlForsan.API\G2K.AlForsan.Base\bin\Debug\netcoreapp3.1\G2K.AlForsan.Base.dll
+C:\Users\eslam.khaled\source\repos\G2K.AlForsan.API\G2K.AlForsan.Base\bin\Debug\netcoreapp3.1\G2K.AlForsan.Base.pdb
+C:\Users\eslam.khaled\source\repos\G2K.AlForsan.API\G2K.AlForsan.Base\obj\Debug\netcoreapp3.1\G2K.AlForsan.Base.csprojAssemblyReference.cache
+C:\Users\eslam.khaled\source\repos\G2K.AlForsan.API\G2K.AlForsan.Base\obj\Debug\netcoreapp3.1\G2K.AlForsan.Base.AssemblyInfoInputs.cache
+C:\Users\eslam.khaled\source\repos\G2K.AlForsan.API\G2K.AlForsan.Base\obj\Debug\netcoreapp3.1\G2K.AlForsan.Base.AssemblyInfo.cs
+C:\Users\eslam.khaled\source\repos\G2K.AlForsan.API\G2K.AlForsan.Base\obj\Debug\netcoreapp3.1\G2K.AlForsan.Base.csproj.CoreCompileInputs.cache
+C:\Users\eslam.khaled\source\repos\G2K.AlForsan.API\G2K.AlForsan.Base\obj\Debug\netcoreapp3.1\G2K.AlForsan.Base.dll
+C:\Users\eslam.khaled\source\repos\G2K.AlForsan.API\G2K.AlForsan.Base\obj\Debug\netcoreapp3.1\G2K.AlForsan.Base.pdb
