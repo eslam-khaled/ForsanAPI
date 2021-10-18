@@ -4,6 +4,7 @@ using G2K.AlForsan.BusinessManager.BusinessInterface;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.ServiceModel.Security;
 using System.Text;
 using System.Threading.Tasks;
 using static G2K.AlForsan.Base.DTOs.CarrierIdentifierDataDto;
@@ -15,54 +16,32 @@ namespace G2K.AlForsan.BusinessManager.BusinessImplementation
     public class UserBusiness : IUserBusiness
     {
         private readonly aeoswsService.AeosWebServiceTypeClient aeoswsServiceClient;
-        //private readonly aeoswsService.AeosWebServiceTypeClient aeoswsServiceClient;
-
         public UserBusiness()
         {
             aeoswsServiceClient = new aeoswsService.AeosWebServiceTypeClient(aeoswsService.AeosWebServiceTypeClient.EndpointConfiguration.aeoswsTypePort);
             aeoswsServiceClient.ClientCredentials.UserName.UserName = "admin";
             aeoswsServiceClient.ClientCredentials.UserName.Password = "Grolle@nedap1";
-            //aeoswsServiceClient.ClientCredentials.ClientCertificate.
+
+            aeoswsServiceClient.ClientCredentials.ServiceCertificate.SslCertificateAuthentication =
+            new X509ServiceCertificateAuthentication()
+            {
+                CertificateValidationMode = X509CertificateValidationMode.None,
+                RevocationMode = System.Security.Cryptography.X509Certificates.X509RevocationMode.NoCheck
+            };
         }
 
         public bool AddEmployee(EmployeeInfoRequest addEmployeeObj)
         {
 
-            //var EndPoint = "https://192.168.0.1/api";
-            //var httpClientHandler = new HttpClientHandler();
-            //httpClientHandler.ServerCertificateCustomValidationCallback = (message, cert, chain, sslPolicyErrors) =>
-            //{
-            //    return true;
-            //};
-            //httpClient = new HttpClient(httpClientHandler) { BaseAddress = new Uri(EndPoint) };
+            aeoswsService.EmployeeInfo employeeInfo = new aeoswsService.EmployeeInfo()
+            {
+                LastName = addEmployeeObj.LastName,
+                PersonnelNo = addEmployeeObj.PersonalNumber,
+                ArrivalDateTime = addEmployeeObj.arrivalDateTimeField,
+                LeaveDateTime = DateTime.Now.AddYears(20)
+            };
 
-
-            //using (var httpClientHandler = new HttpClientHandler())
-            //{
-            //    httpClientHandler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => { return true; };
-            //    using (var client = new HttpClient(httpClientHandler))
-            //    {
-            //        // Make your request...
-            //    }
-            //}
-
-            System.Net.ServicePointManager.ServerCertificateValidationCallback +=
-            (se, cert, chain, sslerror) =>
-             {
-                 aeoswsService.EmployeeInfo employeeInfo = new aeoswsService.EmployeeInfo()
-                 {
-                     LastName = addEmployeeObj.LastName,
-                     PersonnelNo = addEmployeeObj.PersonalNumber,
-                     ArrivalDateTime = addEmployeeObj.arrivalDateTimeField,
-                     LeaveDateTime = DateTime.Now.AddYears(20)
-                 };
-
-                 var result = aeoswsServiceClient.addEmployee(employeeInfo);
-                 return true;
-             };
-
-
-
+            var result = aeoswsServiceClient.addEmployee(employeeInfo);
             return true;
         }
 
@@ -71,10 +50,12 @@ namespace G2K.AlForsan.BusinessManager.BusinessImplementation
             CarrierIdentifierData carrierIdentifierData = new CarrierIdentifierData()
             {
                 CarrierId = carrierIdentifierRequestDto.carrierIdField,
-                IdentifierType = carrierIdentifierRequestDto.identifierTypeField,
                 BadgeNumber = carrierIdentifierRequestDto.badgeNumberField
             };
 
+            // This is a Lookup
+            var response = aeoswsServiceClient.findIdentifierType(new IdentifierTypeInfo { Id = carrierIdentifierData.CarrierId });
+            carrierIdentifierData.IdentifierType = response[0].Id;
             var result = aeoswsServiceClient.assignToken(carrierIdentifierData);
             return true;
         }
@@ -84,17 +65,12 @@ namespace G2K.AlForsan.BusinessManager.BusinessImplementation
             List<UnitOfAuthType> unitOfAuthTypeList = new List<UnitOfAuthType>();
             TemplateSearchInfo templateSearchInfo = new TemplateSearchInfo()
             {
-                //SearchRange = new aeosws.SearchRange()
-                //{
-                //    nrOfRecords = 2,
-                //    nrOfRecordsSpecified = true,
-                //    startRecordNo = 1
-                //},
+
                 TemplateInfo = new TemplateInfo()
                 {
-                    //Description = "test",
+
                     Name = "Full Access",
-                    //IdSpecified = true,
+
                     UnitOfAuthType = (UnitOfAuthType)(int)UnitOfAuthType.OnLine
                 }
             };
@@ -103,19 +79,51 @@ namespace G2K.AlForsan.BusinessManager.BusinessImplementation
 
             ProfileInfo profileInfo = new ProfileInfo()
             {
-                //AuthorisationLoXS = temp,
-                //AuthorisationOnline
+
             };
+            TemplateAuthorisationOnline[] templateAuthorisationOnlineArray = new TemplateAuthorisationOnline[1];
+            TemplateAuthorisationOnline templateAuthorisationOnline = new TemplateAuthorisationOnline
+            {
+                Enabled = true,
+                TemplateId = temp[0].Id,
+                DateFrom = DateTime.Now,
+                DateUntil = DateTime.Now.AddYears(1)
+            };
+            templateAuthorisationOnlineArray[0] = templateAuthorisationOnline;
+
+            AuthorisationOnline authorisationOnline = new AuthorisationOnline()
+            {
+                TemplateAuthorisation = templateAuthorisationOnlineArray
+            };
+            profileInfo.AuthorisationOnline = authorisationOnline;
+            profileInfo.CarrierId = 115;
 
             var result = aeoswsServiceClient.changeCarrierProfile(profileInfo);
             return true;
         }
 
+        public bool findCarrierProfile(long CarrierId)
+        {
+            var result = aeoswsServiceClient.findCarrierProfile(CarrierId);
+            return true;
+        }
         public bool AddVisitor()
         {
+
             VisitorInfo visitorInfo = new VisitorInfo()
             {
-
+                Approvee = true,
+                ArrivalDateTime = DateTime.Now,
+                CarrierType = "Visitor",
+                Company = "G2K",
+                ContactPersonId = 115,
+                FirstName = "eslam",
+                Gender = "Male",
+                LastName = "khaled",
+                Language = "Ar",
+                LeaveDateTime = DateTime.Now.AddYears(1),
+                Title = "Eng",
+               
             };
             var result = aeoswsServiceClient.addVisitor(visitorInfo);
             return true;

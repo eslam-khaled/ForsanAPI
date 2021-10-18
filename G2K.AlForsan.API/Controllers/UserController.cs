@@ -23,15 +23,9 @@ namespace G2K.AlForsan.API.Controllers
 
 
         [HttpPost]
-        public int AddUser(EmployeeInfoRequest addEmployeeObj)
+        public int AddEmployee(EmployeeInfoRequest addEmployeeObj)
         {
-            //return await HandledCall(addEmployeeObj, addEmployeeObj.IsValid, () =>
-            //{
-            //    var response = new EmployeeInfoResponse();
-            //    var res = _userBusiness.AddUser(addEmployeeObj); ;
-            //    response = _mapper.Map<EmployeeInfoResponse>(res);
-            //    return response;
-            //}, r => { });
+
             var res = _userBusiness.AddEmployee(addEmployeeObj);
 
 
@@ -44,22 +38,36 @@ namespace G2K.AlForsan.API.Controllers
         {
             CarrierIdentifierRequestDto carrierIdentifierRequestDto = new CarrierIdentifierRequestDto()
             {
-                carrierIdField = 32,
-                identifierTypeField = 32,
-                badgeNumberField = "32",
-                unitIdField = 32,
+                carrierIdField = 115,
+                identifierTypeField = 1,
+                badgeNumberField = "115",
+                unitIdField = 115,
                 unitIdFieldSpecified = true
             };
             return _userBusiness.assignToken(carrierIdentifierRequestDto);
         }
 
         [HttpPost]
-        [Route("addCarrierAuthorizationsAsync")]
-        public bool addCarrierAuthorizationsAsync()
+        [Route("changeCarrierProfile")]
+        public bool changeCarrierProfile()
         {
             return _userBusiness.changeCarrierProfile();
         }
 
 
+
+        [HttpPost]
+        [Route("findCarrierProfile")]
+        public bool findCarrierProfile(long CarrierId)
+        {
+            return _userBusiness.findCarrierProfile(CarrierId);
+        }
+
+        [HttpPost]
+        [Route("AddVisitor")]
+        public bool AddVisitor()
+        {
+            return _userBusiness.AddVisitor();
+        }
     }
 }

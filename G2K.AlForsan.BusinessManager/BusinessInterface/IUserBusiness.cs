@@ -11,5 +11,6 @@ namespace G2K.AlForsan.BusinessManager.BusinessInterface
         bool assignToken(CarrierIdentifierRequestDto carrierIdentifierRequestDto);
         bool changeCarrierProfile();
         bool AddVisitor();
+        bool findCarrierProfile(long CarrierId);
     }
 }

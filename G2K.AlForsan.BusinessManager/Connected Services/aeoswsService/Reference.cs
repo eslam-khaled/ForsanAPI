@@ -27771,6 +27771,7 @@ namespace aeoswsService
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         aeoswsService.addEmployeeResponse aeoswsService.AeosWebServiceType.addEmployee(aeoswsService.addEmployee request)
         {
+
             return base.Channel.addEmployee(request);
         }
         
@@ -27779,6 +27780,8 @@ namespace aeoswsService
             aeoswsService.addEmployee inValue = new aeoswsService.addEmployee();
             inValue.EmployeeAdd = EmployeeAdd;
             aeoswsService.addEmployeeResponse retVal = ((aeoswsService.AeosWebServiceType)(this)).addEmployee(inValue);
+            //retVal.Security.Transport.ClientCredentialType = System.ServiceModel.HttpClientCredentialType.Basic;
+
             return retVal.EmployeeResult;
         }
         
@@ -30731,6 +30734,7 @@ namespace aeoswsService
                 result.MaxReceivedMessageSize = int.MaxValue;
                 result.AllowCookies = true;
                 result.Security.Mode = System.ServiceModel.BasicHttpSecurityMode.Transport;
+                result.Security.Transport.ClientCredentialType = System.ServiceModel.HttpClientCredentialType.Basic;
                 return result;
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));

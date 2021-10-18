@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "G2K.AlForsan.Base", "G2K.Al
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "G2K.AlForsan.BusinessManager", "G2K.AlForsan.BusinessManager\G2K.AlForsan.BusinessManager.csproj", "{A46EF917-B8CD-4E0F-8737-9C0ACC5F86E2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "G2K.AlForsan.BusinessEnrollement", "G2K.AlForsan.BusinessEnrollement\G2K.AlForsan.BusinessEnrollement.csproj", "{396ED920-E383-42F5-BC7B-72E3759CDBDB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A46EF917-B8CD-4E0F-8737-9C0ACC5F86E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A46EF917-B8CD-4E0F-8737-9C0ACC5F86E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A46EF917-B8CD-4E0F-8737-9C0ACC5F86E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{396ED920-E383-42F5-BC7B-72E3759CDBDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{396ED920-E383-42F5-BC7B-72E3759CDBDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{396ED920-E383-42F5-BC7B-72E3759CDBDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{396ED920-E383-42F5-BC7B-72E3759CDBDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
